@@ -24,11 +24,11 @@
 </style>
 
 { #if loaded }
-	<main in:fade class="bg-gray-100 w-full h-100vh relative flex items-center justify-center">
+	<main in:fade class="bg-gray-100 w-full h-100vh relative flex flex-col lg:flex-row items-center justify-center">
 		<!-- Text Panel -->
-		<section class="w-full h-full flex flex-col justify-between py-12">
+		<section class="w-full h-full flex flex-col justify-between py-4 md:py-12">
 			<!-- Header -->
-			<div class="w-full px-2 md:px-6 lg:px-8 flex justify-between items-center">
+			<div class="w-full px-8 md:px-6 flex justify-between items-center">
 				<!-- Logotype -->
 				<img style="height: 1.1rem;" src="./logotype/black.svg" alt="Black unfull logotype">		
 
@@ -45,15 +45,17 @@
 			</div>
 
 			<!-- Text -->
-			<div class="w-full px-2 md:px-6 lg:px-8">
+			<div class="w-full px-2 md:px-6 lg:px-8 mt-16 md:mt-0">
 				<!-- Heading -->
-				<h1 style="font-family: 'Rubik', sans-serif;" class="text-4xl text-black font-medium">Удобные, небольшие и <span style="font-family: 'Permanent Marker', cursive;" class="text-4xl text-red-400">un</span>нужные сервисы и сайты.</h1>
-				<p class="text-extra-xss text-gray-700 mt-1">*unнужные - означает ненужные :)</p>
+				<div class="px-12 md:px-0">
+					<h1 style="font-family: 'Rubik', sans-serif;" class="text-4xl text-black font-medium">Удобные, небольшие и <span style="font-family: 'Permanent Marker', cursive;" class="text-4xl text-red-400">un</span>нужные сервисы и сайты.</h1>
+					<p class="text-extra-xss text-gray-700 mt-1">*unнужные - означает ненужные :)</p>
+				</div>
 
 				<!-- Subheading + Button -->
-				<div class="mt-4 w-full relative flex">
+				<div class="mt-12 md:mt-4 w-full relative flex flex-col md:flex-row">
 					<!-- Button -->
-					<div class="w-1/3 pr-6">
+					<div class="w-full md:w-1/3 px-12 md:px-0 md:pr-6">
 						<!-- hover:text-black hover:bg-white -->
 						<button class="py-3 w-full px-4 opacity-75 cursor-not-allowed bg-black text-white flex items-center justify-center">
 							<!-- Text -->
@@ -65,16 +67,22 @@
 					</div>
 
 					<!-- Text -->
-					<div class="w-2/3">
-						<p class="text-sm text-gray-700 w-2/3">Эта секция всё ещё находится на стадии Раней Разработкий.</p>
+					<div class="w-full px-12 md:px-0 md:w-2/3">
+						<p class="text-sm text-gray-700 w-full md:w-2/3">Эта секция всё ещё находится на стадии Раней Разработкий.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 		
 		<!-- Images && Services Panel -->
-		<section class="w-full h-100vh">
-			<div class="w-full h-full relative">
+		<section class="w-full h-100vh flex justify-center items-center">
+			<!-- Mobile view -->
+			<div class="w-full h-full relative lg:hidden">
+			
+			</div>
+
+			<!-- Desktop view -->
+			<div class="w-full h-full hidden lg:block relative">
 				<!-- Row #1 -->
 				<div class="w-full flex">
 					<div class="w-1/3">
@@ -95,22 +103,22 @@
 							}} class="cursor-pointer absolute inset-0 w-full h-full px-3 py-3 flex flex-col justify-end items-end">
 								<!-- Some Texts -->
 								<div class="w-full text-right">
-									<h1 class="text-xl text-white">Собачникам</h1>
+									<h1 class="text-xl text-white">Лапколюбителям</h1>
 
 									<p class="text-white text-xs">Социальная сеть для любителей <span class="border-b-1 border-dotted border-white">Щенячьего Патруля</span>, <span class="border-b-1 border-dotted border-white">Улицы 101-го Далматинца</span> и т.п.</p>
 								</div>
 
 								<!-- Logotype -->
 								<div class="w-full flex items-center mt-4">
-									<img style="width: 1.5rem; height: 1.5rem;" src="./logotype/paw/white.svg" alt="Paw Universes Logotype">
+									<img style="height: 1.5rem;" src="./logotype/paw/white-full.svg" alt="Paw Universes Logotype">
 									
-									<div class="relative py-1 ml-2 pr-12">
+									<!-- <div class="relative py-1 ml-2 pr-12">
 										<h1 class="text-xl text-white font-semibold">Paws</h1>
 
 										<span class="absolute top-0 right-0 rounded-full bg-red-500 px-2 py-1 text-extra-xss text-white">
 											prototype
 										</span>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -136,15 +144,7 @@
 
 								<!-- Logotype -->
 								<div class="w-full flex items-center mt-4">
-									<img style="width: 1.5rem; height: 1.5rem;" src="./logotype/ctrlpaint/white.svg" alt="Ctrl+Paint Logotype">
-
-									<div class="relative ml-2 py-1 pr-6">
-										<h1 class="text-xl text-white font-semibold">Ctrl+Paint</h1>
-
-										<span class="absolute top-0 right-0 rounded-full bg-white px-2 py-1 text-extra-xss text-black">
-											ru
-										</span>
-									</div>
+									<img style="height: 1.5rem;" src="./logotype/ctrlpaint/white-full.svg" alt="Ctrl+Paint Logotype">
 								</div>
 							</div>
 						</div>
@@ -152,11 +152,41 @@
 
 					<div class="w-1/3">
 						<!-- https://source.unsplash.com/random/900x900 -->
-						<div style="padding-top: 100%; border-radius: 50%; background-image: url('https://i.ytimg.com/vi/EEvopkbc4FE/maxresdefault.jpg'); background-size: cover; background-repeat: no-repeat;" class="bg-black"></div>
+						<div style="padding-top: 100%; border-radius: 50%; background-image: url('https://source.unsplash.com/random/900x900'); background-size: cover; background-repeat: no-repeat;" class="bg-black"></div>
 					</div>
 
+					<!-- 
+						@service odzi
+					 -->
 					<div class="w-1/3">
-						<div style="padding-top: 100%; border-bottom-left-radius: 50%;" class="bg-yellow-300"></div>
+						<div style="padding-top: 100%; border-bottom-right-radius: 50%;" class="bg-yellow-500 relative">
+							<!-- Locked Sign -->
+							<div style="z-index: 2; background: rgba(0,0,0,0.5); border-bottom-right-radius: 50%;" class="absolute inset-0 w-full h-full">
+								<div class="w-full h-full flex flex-col justify-center items-center">
+									<img style="height: 2rem; width: 2rem;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/lock_1f512.png" alt="Locked Emoji from emojipedia cdn">
+
+									<!-- Text -->
+									<div class="text-center px-4">
+										<h1 class="mt-4 text-md text-white font-semibold">Разработка</h1>
+										<p class="text-sm text-gray-100">Этот сервис находится в стадии глубочайшей разработки.</p>
+									</div>
+								</div>							
+							</div>
+							
+							<div style="z-index: 1;" class="cursor-not-allowed absolute inset-0 w-full h-full px-3 py-3 flex flex-col justify-end items-end">
+								<!-- Some Texts -->
+								<div class="w-full text-left">
+									<h1 class="text-xl text-white">Собачникам</h1>
+
+									<p class="text-white text-xs">Полностью <span class="border-b-1 border-dotted border-white">бесплатные</span> социальные сервисы для дрессировки и обучению собак.</p>
+								</div>
+
+								<!-- Logotype -->
+								<div class="w-full flex items-center mt-4">
+									<img style="height: 1.5rem;" src="./logotype/odzi/white-full.svg" alt="Odzi Logotype">
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
