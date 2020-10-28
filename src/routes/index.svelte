@@ -45,7 +45,7 @@
 			</header>
 
 			<!-- Text -->
-			<div class="w-full py-6 px-12 md:px-6 pt-24 md:pt-0">
+			<div class="w-full py-6 px-8 md:px-6 pt-24 md:pt-0">
 				<!-- Heading -->
 				<div>
 					<h1 style="font-family: 'Rubik', sans-serif;" class="text-4xl text-black font-medium">Удобные, небольшие и <span style="font-family: 'Permanent Marker', cursive;" class="text-4xl text-red-400">un</span>нужные сервисы и сайты.</h1>
@@ -55,7 +55,7 @@
 				<!-- Subheading + Button -->
 				<div class="mt-12 md:mt-4 w-full relative flex flex-col md:flex-row">
 					<!-- Button -->
-					<div class="w-full md:w-1/3 px-12 md:px-0 md:pr-6">
+					<div class="w-full md:w-1/3 md:px-0 md:pr-6">
 						<!-- hover:text-black hover:bg-white -->
 						<button class="py-3 w-full px-4 opacity-75 cursor-not-allowed bg-black text-white flex items-center justify-center">
 							<!-- Text -->
@@ -67,7 +67,7 @@
 					</div>
 
 					<!-- Text -->
-					<div class="w-full px-12 md:px-0 md:w-2/3">
+					<div class="w-full md:px-0 md:w-2/3">
 						<p class="text-sm text-gray-700 w-full md:w-2/3">Эта секция всё ещё находится на стадии Раней Разработкий.</p>
 					</div>
 				</div>
