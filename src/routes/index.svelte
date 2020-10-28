@@ -28,7 +28,7 @@
 		<!-- Text Panel -->
 		<section class="w-full h-full relative flex flex-col lg:flex-row items-end">
 			<!-- Header -->
-			<header class="absolute inset-x-0 top-0 w-full py-6 px-8 md:px-6 flex justify-between">
+			<header class="absolute inset-x-0 top-0 w-full py-6 px-8 md:px-6 flex justify-between items-center">
 			  <!-- Logotype -->
 				<img style="height: 1.1rem;" src="./logotype/black.svg" alt="Black unfull logotype">		
 
