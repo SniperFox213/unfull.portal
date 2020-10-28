@@ -24,7 +24,7 @@
 </style>
 
 { #if loaded }
-	<main in:fade class="bg-gray-100 w-full h-100vh relative flex flex-col lg:flex-row items-center justify-center">
+	<main in:fade class="bg-gray-100 w-full lg:h-100vh relative flex flex-col lg:flex-row items-center justify-center">
 		<!-- Text Panel -->
 		<section class="w-full h-full relative flex flex-col lg:flex-row items-end">
 			<!-- Header -->
@@ -45,7 +45,7 @@
 			</header>
 
 			<!-- Text -->
-			<div class="w-full py-6 px-12 md:px-6">
+			<div class="w-full py-6 px-12 md:px-6 pt-24 md:pt-0">
 				<!-- Heading -->
 				<div>
 					<h1 style="font-family: 'Rubik', sans-serif;" class="text-4xl text-black font-medium">Удобные, небольшие и <span style="font-family: 'Permanent Marker', cursive;" class="text-4xl text-red-400">un</span>нужные сервисы и сайты.</h1>
