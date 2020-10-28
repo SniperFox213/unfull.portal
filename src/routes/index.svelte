@@ -26,10 +26,10 @@
 { #if loaded }
 	<main in:fade class="bg-gray-100 w-full h-100vh relative flex flex-col lg:flex-row items-center justify-center">
 		<!-- Text Panel -->
-		<section class="w-full h-full flex flex-col justify-between py-4 md:py-12">
+		<section class="w-full h-full relative flex flex-col lg:flex-row items-end">
 			<!-- Header -->
-			<div class="w-full px-8 md:px-6 flex justify-between items-center">
-				<!-- Logotype -->
+			<header class="absolute inset-x-0 top-0 w-full py-6 px-8 md:px-6 flex justify-between">
+			  <!-- Logotype -->
 				<img style="height: 1.1rem;" src="./logotype/black.svg" alt="Black unfull logotype">		
 
 				<!-- Some Buttons -->
@@ -42,12 +42,12 @@
 						Связаться
 					</p>
 				</button>
-			</div>
+			</header>
 
 			<!-- Text -->
-			<div class="w-full px-2 md:px-6 lg:px-8 mt-16 md:mt-0">
+			<div class="w-full py-6 px-12 md:px-6">
 				<!-- Heading -->
-				<div class="px-12 md:px-0">
+				<div>
 					<h1 style="font-family: 'Rubik', sans-serif;" class="text-4xl text-black font-medium">Удобные, небольшие и <span style="font-family: 'Permanent Marker', cursive;" class="text-4xl text-red-400">un</span>нужные сервисы и сайты.</h1>
 					<p class="text-extra-xss text-gray-700 mt-1">*unнужные - означает ненужные :)</p>
 				</div>
@@ -78,7 +78,98 @@
 		<section class="w-full h-100vh flex justify-center items-center">
 			<!-- Mobile view -->
 			<div class="w-full h-full relative lg:hidden">
-			
+				<!-- 
+					@service ctrl+paint
+				 -->
+				<div class="w-full relative">
+					<div style="padding-top: 100%;" class="bg-indigo-400 relative">
+						<div on:click={(e) => {
+							window.location.href = "https://ctrlpaint.ru";
+						}} class="absolute inset-0 w-full h-full cursor-pointer px-2 py-2 flex flex-col justify-center items-center">
+							<!-- Some Texts -->
+							<div class="w-full text-center px-6">
+								<h1 class="text-2xl text-white">Художникам</h1>
+
+								<p class="text-white text-base">Перевод профессиональных и <span class="border-b-1 border-dotted border-white">полностью бесплатных</span>, 5-ти минутных и понятных уроков по графическому рисованию.</p>
+							</div>
+
+							<!-- Logotype -->
+							<div class="w-full flex justify-center mt-6">
+								<img style="height: 2.5rem;" src="./logotype/ctrlpaint/white-full.svg" alt="Ctrl+Paint Logotype">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 
+					@service Paw Universes
+				 -->
+				<div class="w-full relative">
+					<div style="padding-top: 100%;" class="bg-black relative">
+						<!-- Locked Sign -->
+						<div style="z-index: 2; background: rgba(0,0,0,0.8);" class="absolute cursor-not-allowed inset-0 w-full h-full">
+							<div class="w-full h-full flex flex-col justify-center items-center">
+								<img style="height: 3rem; width: 3rem;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/lock_1f512.png" alt="Locked Emoji from emojipedia cdn">
+
+								<!-- Text -->
+								<div class="text-center px-4 relative">
+									<h1 class="mt-4 text-xl text-white font-semibold">Разработка</h1>
+									<p class="text-base text-gray-100">Этот сервис находится в стадии глубочайшей разработки.</p>
+								</div>
+							</div>							
+						</div>
+
+						<div on:click={() => {
+							window.location.href = "https://paw.unfull.ml/";
+						}} class="cursor-pointer absolute inset-0 w-full h-full px-3 py-3 flex flex-col justify-center items-center">
+							<!-- Some Texts -->
+							<div class="w-full text-center px-6">
+								<h1 class="text-2xl text-white">Лапколюбителям</h1>
+
+								<p class="text-white text-base">Социальная сеть для любителей <span class="border-b-1 border-dotted border-white">Щенячьего Патруля</span>, <span class="border-b-1 border-dotted border-white">Улицы 101-го Далматинца</span> и т.п.</p>
+							</div>
+
+							<!-- Logotype -->
+							<div class="w-full flex justify-center mt-6">
+								<img style="height: 2.5rem;" src="./logotype/paw/white-full.svg" alt="Paw Universes Logotype">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 
+					@service odzi
+				 -->
+				<div class="w-full relative">
+					<div style="padding-top: 100%;" class="bg-yellow-500 relative">
+						<!-- Locked Sign -->
+						<div style="z-index: 2; background: rgba(0,0,0,0.8);" class="absolute cursor-not-allowed inset-0 w-full h-full">
+							<div class="w-full h-full flex flex-col justify-center items-center">
+								<img style="height: 2rem; width: 2rem;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/lock_1f512.png" alt="Locked Emoji from emojipedia cdn">
+
+								<!-- Text -->
+								<div class="text-center px-4">
+									<h1 class="mt-4 text-xl text-white font-semibold">Разработка</h1>
+									<p class="text-base text-gray-100">Этот сервис находится в стадии глубочайшей разработки.</p>
+								</div>
+							</div>							
+						</div>
+						
+						<div style="z-index: 1;" class="cursor-not-allowed absolute inset-0 w-full h-full px-3 py-3 flex flex-col justify-center items-center">
+							<!-- Some Texts -->
+							<div class="w-full text-center px-6">
+								<h1 class="text-2xl text-white">Собачникам</h1>
+
+								<p class="text-white text-base">Полностью <span class="border-b-1 border-dotted border-white">бесплатные</span> социальные сервисы для дрессировки и обучению собак.</p>
+							</div>
+
+							<!-- Logotype -->
+							<div class="w-full flex justify-center mt-6">
+								<img style="height: 2.5rem;" src="./logotype/odzi/white-full.svg" alt="Odzi Logotype">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<!-- Desktop view -->
@@ -98,6 +189,19 @@
 					 -->
 					<div class="w-1/3 relative">
 						<div style="padding-top: 100%; border-top-left-radius: 50%;" class="bg-black relative">
+							<!-- Locked Sign -->
+							<div style="z-index: 2; background: rgba(0,0,0,0.8); border-top-left-radius: 50%;" class="absolute cursor-not-allowed inset-0 w-full h-full">
+								<div class="w-full h-full flex flex-col justify-center items-center">
+									<img style="height: 2rem; width: 2rem;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/lock_1f512.png" alt="Locked Emoji from emojipedia cdn">
+
+									<!-- Text -->
+									<div class="text-center px-4 relative">
+										<h1 class="mt-4 text-md text-white font-semibold">Разработка</h1>
+										<p class="text-sm text-gray-100">Этот сервис находится в стадии глубочайшей разработки.</p>
+									</div>
+								</div>							
+							</div>
+
 							<div on:click={() => {
 								window.location.href = "https://paw.unfull.ml/";
 							}} class="cursor-pointer absolute inset-0 w-full h-full px-3 py-3 flex flex-col justify-end items-end">
@@ -111,14 +215,6 @@
 								<!-- Logotype -->
 								<div class="w-full flex items-center mt-4">
 									<img style="height: 1.5rem;" src="./logotype/paw/white-full.svg" alt="Paw Universes Logotype">
-									
-									<!-- <div class="relative py-1 ml-2 pr-12">
-										<h1 class="text-xl text-white font-semibold">Paws</h1>
-
-										<span class="absolute top-0 right-0 rounded-full bg-red-500 px-2 py-1 text-extra-xss text-white">
-											prototype
-										</span>
-									</div> -->
 								</div>
 							</div>
 						</div>
@@ -161,7 +257,7 @@
 					<div class="w-1/3">
 						<div style="padding-top: 100%; border-bottom-right-radius: 50%;" class="bg-yellow-500 relative">
 							<!-- Locked Sign -->
-							<div style="z-index: 2; background: rgba(0,0,0,0.5); border-bottom-right-radius: 50%;" class="absolute inset-0 w-full h-full">
+							<div style="z-index: 2; background: rgba(0,0,0,0.8); border-bottom-right-radius: 50%;" class="absolute cursor-not-allowed inset-0 w-full h-full">
 								<div class="w-full h-full flex flex-col justify-center items-center">
 									<img style="height: 2rem; width: 2rem;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/lock_1f512.png" alt="Locked Emoji from emojipedia cdn">
 
