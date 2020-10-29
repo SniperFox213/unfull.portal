@@ -102,6 +102,29 @@
 				</div>
 
 				<!-- 
+					@service odzi
+				 -->
+				<div class="w-full relative">
+					<div style="padding-top: 100%;" class="bg-yellow-500 relative">						
+						<div on:click={() => {
+							window.location.href = "https://odzi.unfull.ml/";
+						}} style="z-index: 1;" class="cursor-not-allowed absolute inset-0 w-full h-full px-3 py-3 flex flex-col justify-center items-center">
+							<!-- Some Texts -->
+							<div class="w-full text-center px-6">
+								<h1 class="text-2xl text-white">Собачникам</h1>
+
+								<p class="text-white text-base">Полностью <span class="border-b-1 border-dotted border-white">бесплатные</span> социальные сервисы для дрессировки и обучению собак.</p>
+							</div>
+
+							<!-- Logotype -->
+							<div class="w-full flex justify-center mt-6">
+								<img style="height: 2.5rem;" src="./logotype/odzi/white-full.svg" alt="Odzi Logotype">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 
 					@service Paw Universes
 				 -->
 				<div class="w-full relative">
@@ -132,40 +155,6 @@
 							<!-- Logotype -->
 							<div class="w-full flex justify-center mt-6">
 								<img style="height: 2.5rem;" src="./logotype/paw/white-full.svg" alt="Paw Universes Logotype">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 
-					@service odzi
-				 -->
-				<div class="w-full relative">
-					<div style="padding-top: 100%;" class="bg-yellow-500 relative">
-						<!-- Locked Sign -->
-						<div style="z-index: 2; background: rgba(0,0,0,0.8);" class="absolute cursor-not-allowed inset-0 w-full h-full">
-							<div class="w-full h-full flex flex-col justify-center items-center">
-								<img style="height: 2rem; width: 2rem;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/lock_1f512.png" alt="Locked Emoji from emojipedia cdn">
-
-								<!-- Text -->
-								<div class="text-center px-4">
-									<h1 class="mt-4 text-xl text-white font-semibold">Разработка</h1>
-									<p class="text-base text-gray-100">Этот сервис находится в стадии глубочайшей разработки.</p>
-								</div>
-							</div>							
-						</div>
-						
-						<div style="z-index: 1;" class="cursor-not-allowed absolute inset-0 w-full h-full px-3 py-3 flex flex-col justify-center items-center">
-							<!-- Some Texts -->
-							<div class="w-full text-center px-6">
-								<h1 class="text-2xl text-white">Собачникам</h1>
-
-								<p class="text-white text-base">Полностью <span class="border-b-1 border-dotted border-white">бесплатные</span> социальные сервисы для дрессировки и обучению собак.</p>
-							</div>
-
-							<!-- Logotype -->
-							<div class="w-full flex justify-center mt-6">
-								<img style="height: 2.5rem;" src="./logotype/odzi/white-full.svg" alt="Odzi Logotype">
 							</div>
 						</div>
 					</div>
@@ -255,21 +244,10 @@
 						@service odzi
 					 -->
 					<div class="w-1/3">
-						<div style="padding-top: 100%; border-bottom-right-radius: 50%;" class="bg-yellow-500 relative">
-							<!-- Locked Sign -->
-							<div style="z-index: 2; background: rgba(0,0,0,0.8); border-bottom-right-radius: 50%;" class="absolute cursor-not-allowed inset-0 w-full h-full">
-								<div class="w-full h-full flex flex-col justify-center items-center">
-									<img style="height: 2rem; width: 2rem;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/lock_1f512.png" alt="Locked Emoji from emojipedia cdn">
-
-									<!-- Text -->
-									<div class="text-center px-4">
-										<h1 class="mt-4 text-md text-white font-semibold">Разработка</h1>
-										<p class="text-sm text-gray-100">Этот сервис находится в стадии глубочайшей разработки.</p>
-									</div>
-								</div>							
-							</div>
-							
-							<div style="z-index: 1;" class="cursor-not-allowed absolute inset-0 w-full h-full px-3 py-3 flex flex-col justify-end items-end">
+						<div style="padding-top: 100%; border-bottom-right-radius: 50%;" class="bg-yellow-500 relative">							
+							<div on:click={(e) => {
+								window.location.href = "https://odzi.unfull.ml";
+							}} style="z-index: 1;" class="cursor-not-allowed absolute inset-0 w-full h-full px-3 py-3 flex flex-col justify-end items-end">
 								<!-- Some Texts -->
 								<div class="w-full text-left">
 									<h1 class="text-xl text-white">Собачникам</h1>
