@@ -30,7 +30,7 @@
 			<!-- Header -->
 			<header class="absolute inset-x-0 top-0 w-full py-6 px-8 md:px-6 flex justify-between items-center">
 			  <!-- Logotype -->
-				<img style="height: 1.1rem;" src="./logotype/black.svg" alt="Black unfull logotype">		
+				<img style="height: 1.2rem;" src="./logotype/black.svg" alt="Black unfull logotype">		
 
 				<!-- Some Buttons -->
 				<button class="text-black px-4 py-2 hover:text-white hover:bg-black flex items-center">
