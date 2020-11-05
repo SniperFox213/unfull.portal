@@ -107,7 +107,7 @@
 				<div class="w-full relative">
 					<div style="padding-top: 100%;" class="bg-yellow-500 relative">						
 						<div on:click={() => {
-							window.location.href = "https://odzi.unfull.ml/";
+							window.location.href = "https://odzi.dog/";
 						}} style="z-index: 1;" class="cursor-pointer absolute inset-0 w-full h-full px-3 py-3 flex flex-col justify-center items-center">
 							<!-- Some Texts -->
 							<div class="w-full text-center px-6">
