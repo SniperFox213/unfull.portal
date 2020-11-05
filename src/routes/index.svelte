@@ -246,7 +246,7 @@
 					<div class="w-1/3">
 						<div style="padding-top: 100%; border-bottom-right-radius: 50%;" class="bg-yellow-500 relative">							
 							<div on:click={(e) => {
-								window.location.href = "https://odzi.unfull.ml";
+								window.location.href = "https://odzi.dog";
 							}} style="z-index: 1;" class="cursor-pointer absolute inset-0 w-full h-full px-3 py-3 flex flex-col justify-end items-end">
 								<!-- Some Texts -->
 								<div class="w-full text-left">
