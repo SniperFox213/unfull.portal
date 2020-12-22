@@ -5,14 +5,18 @@ module.exports = {
   },
   purge: [],
   theme: {
+    fontSize: {
+      "extra-xs": ['0.6vw'],
+      xs: ['0.75vw'],
+      sm: ['0.85vw'],
+      base: ['1vw'],
+      xl: ['1.5vw'],
+      "2xl": ['2vw'],
+      "3xl": ['3.5vw']
+    },
     extend: {
       height: {
         '100vh': '100vh'
-      },
-
-      fontSize: {
-        'extra-xss': '0.50rem',
-        'extra-xs': '0.65rem'
       },
 
       borderWidth: {
