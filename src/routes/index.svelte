@@ -106,7 +106,7 @@
 
       status: 0
     }
-  ]
+  ];
 
 	// Let's now change our loaded state on component mount.
 	onMount(() => {
@@ -177,7 +177,7 @@
       </section>
       
       <!-- Illustrations Panel -->
-      <section class="w-full h-auto lg:h-100vh hidden lg:flex justify-center items-end relative">
+      <section style="z-index: 1;" class="w-full h-auto lg:h-100vh hidden lg:flex justify-center items-end relative">
         <!-- Background #1 -->
         <div in:slide={{ duration: 850 }} style="height: 40vh;" class="opacity-75 absolute bottom-0 left-0 w-2/3 shadow-xl bg-white rounded-t-lg">
           <!-- Badge -->
@@ -192,7 +192,7 @@
         </div>
         
         <!-- Main Features Screen -->
-        <div in:slide={{ duration: 1000 }} style="height: 65vh; z-index: 2;" class="w-2/3 shadow-xl bg-white rounded-t-lg">
+        <div in:slide={{ duration: 1000 }} style="height: 65vh; z-index: 2;" class="w-2/3 shadow-xl bg-white rounded-t-lg relative">
           <!-- Badge -->
           <div class="w-full flex justify-center py-3">
             <div class="opacity-75 text-sm px-3 py-1 rounded-full bg-gray-100">
@@ -202,6 +202,21 @@
 
           <!-- Feature Title -->
           <h1 class="text-xl text-center font-bold">Максимально просто</h1>
+
+          <!-- Emoji -->
+          <div class="w-full flex justify-center mt-6">
+            <img class="w-1/4" src="./icons/joystick.png" alt="Emoji" />
+          </div>
+
+          <!-- Text -->
+          <p class="mt-4 text-sm text-gray-900 text-center px-6 lg:px-12">Мы стараемся делать все наши сервисы максимально простыми и интуитивно понятными. Именно поэтому мы гарантируем то, что вы чуть ли не моментально сможете разобраться в том, как именно работает каждый наш сервис!</p>
+
+          <!-- Dots -->
+          <div class="absolute inset-x-0 bottom-0 w-full py-2 flex justify-center items-center opacity-75">
+            <div class="w-4 h-4 mx-2 rounded-full bg-black"></div>
+            <div class="w-3 h-3 mx-2 rounded-full border-2 border-gray-900"></div>
+            <div class="w-3 h-3 mx-2 rounded-full border-2 border-gray-900"></div>
+          </div>
         </div>
 
         <!-- Background #2 -->
@@ -215,12 +230,27 @@
 
           <!-- Feature Title -->
           <h1 class="text-xl text-center font-bold">Полностью бесплатно</h1>
+        
+          <!-- Emoji -->
+          <div class="w-full flex justify-center mt-6">
+            <img class="w-1/4" src="./icons/credit-card.png" alt="Emoji" />
+          </div>
+
+          <!-- Text -->
+          <p class="mt-4 text-sm text-gray-900 text-center px-6 lg:px-12">Базовая версия любого нашего сервиса полностью бесплатна! Мы, будучи маленькой и безденежной командой, стараемся уменьшить количество ограничений для базовых версиях наших продуктов. Так же ни на одном сайте нету рекламы! Ну, как минимум, пока что.</p>
+
+          <!-- Dots -->
+          <div class="absolute inset-x-0 bottom-0 w-full py-2 flex justify-center items-center opacity-75">
+            <div class="w-3 h-3 mx-2 rounded-full border-2 border-gray-900"></div>
+            <div class="w-4 h-4 mx-2 rounded-full bg-black"></div>
+            <div class="w-3 h-3 mx-2 rounded-full border-2 border-gray-900"></div>
+          </div>
         </div>
       </section>
     </div>
 
     <!-- Services Panel -->
-    <section id="services" class="w-full h-min-screen relative px-6 lg:px-12 bg-white">
+    <section style="z-index: 2;" id="services" class="w-full border-t-1 border-gray-300 h-min-screen relative px-6 lg:px-12 bg-white">
       <!-- Big Title -->
       <div class="w-full pt-8 pb-2 text-center">
         <h1 class="text-2xl text-black font-bold">Список сервисов</h1>
@@ -252,7 +282,7 @@
               { #each category.items as service }
                 <div class="w-1/2 relative">
                   <div style="padding-top: 50%;" class="w-full relative px-3 py-2">
-                    <div class="absolute inset-0 w-full h-full flex-col justify-center items-center border-1 border-gray-300 bg-{ service.color }">
+                    <div class="absolute inset-0 w-full h-full flex-col justify-center items-center bg-{ service.color }">
                       <!-- Logotype -->
                       <div class="w-full flex items-center pt-4 px-4">
                         <img style="height: 2.6vw;" src="{ service.logotype }" alt="Service Logotype">
