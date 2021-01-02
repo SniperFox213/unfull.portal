@@ -121,18 +121,20 @@
 	@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 </style>
 
+<div class="bg-yellow-400 bg-blue-400 bg-indigo-400 hidden"></div>
+
 { #if loaded }
 	<main in:fade class="relative">
     <div class="bg-gray-200 w-full relative flex">
       <!-- Text Panel -->
-      <section class="w-full h-screen relative flex flex-col lg:flex-row items-end">
+      <section class="w-full h-screen relative flex flex-col lg:flex-row justify-center items-center lg:items-end">
         <!-- Header -->
-        <header class="absolute inset-x-0 top-0 w-full py-6 px-8 md:px-6 flex justify-between items-center">
+        <header class="absolute inset-x-0 top-0 w-full py-6 px-8 md:px-6 flex justify-center lg:justify-between items-center">
           <!-- Logotype -->
           <img style="height: 1.2rem;" src="./logotype/black.svg" alt="Black unfull logotype">		
         
           <!-- Some Links -->
-          <div class="flex items-center">
+          <div class="hidden lg:flex items-center">
             <a class="mx-3 text-xs text-gray-900 opacity-75 transition duration-200 ease-in-out hover:text-black hover:opacity-100" href="/">Сервисы</a>
             <a class="mx-3 text-xs text-gray-900 opacity-75 transition duration-200 ease-in-out hover:text-black hover:opacity-100" href="/">Поддержка</a>
             <a class="mx-3 text-xs text-gray-900 opacity-75 transition duration-200 ease-in-out hover:text-black hover:opacity-100" href="/">Наши цели</a>
@@ -258,14 +260,16 @@
       </div>
       
       <!-- Fast Categories Skip -->
-      <div class="w-full py-6 px-6 flex justify-center">
-        { #each services as category }
-          <div on:click={(e) => {
-            if (category.status != 0) window.location.href = `#cat${ category.catId }`;
-          }} class="{ category.status != 0 ? "cursor-pointer" : "opacity-75 cursor-not-allowed" } mx-2 px-4 py-2 rounded-full bg-gray-300 text-black text-base">
-            { category.name }
-          </div>
-        { /each }
+      <div style="overflow: hidden; overflow-x: auto;" class="mb-12 lg:mb-0 h-24 relative w-full flex justify-center">
+        <div class="absolute inset-0 w-full h-full flex items-center justify-center py-6 px-6">
+          { #each services as category }
+            <div on:click={(e) => {
+              if (category.status != 0) window.location.href = `#cat${ category.catId }`;
+            }} class="{ category.status != 0 ? "cursor-pointer" : "opacity-75 cursor-not-allowed" } mx-2 px-4 py-2 rounded-full bg-gray-300 text-black text-base">
+              { category.name }
+            </div>
+          { /each }
+        </div>
       </div>
 
       <!-- Services List -->
@@ -278,14 +282,14 @@
             <p class="text-md text-gray-900">{ category.description }</p>
 
             <!-- Items -->
-            <div class="w-full mt-4 relative flex">
+            <div class="w-full mt-4 relative flex flex-wrap">
               { #each category.items as service }
-                <div class="w-1/2 relative">
-                  <div style="padding-top: 50%;" class="w-full relative px-3 py-2">
+                <div class="w-full lg:w-1/2 relative">
+                  <div class="pt-100% lg:pt-50% w-full relative px-3 py-2">
                     <div class="absolute inset-0 w-full h-full flex-col justify-center items-center bg-{ service.color }">
                       <!-- Logotype -->
                       <div class="w-full flex items-center pt-4 px-4">
-                        <img style="height: 2.6vw;" src="{ service.logotype }" alt="Service Logotype">
+                        <img class="h-6 lg:h-8" src="{ service.logotype }" alt="Service Logotype">
                         
                         { #if service.badges != null && service.badges.length > 0 }
                           <!-- Divider -->

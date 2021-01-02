@@ -20,7 +20,13 @@ module.exports = {
 		},
 	},
 	theme: {
-		extend: {},
+		extend: {
+			padding: {
+				"50%": "50%",
+				"75%": "75%",
+				"100%": "100%"
+			}
+		},
 	},
 	variants: {
 		extend: {},
