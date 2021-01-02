@@ -1,8 +1,3 @@
-<script>
-	// Let's now import our styles component
-	import styles from "../components/styles.svelte";
-</script>
-
 <!-- Importing some fonts -->
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');

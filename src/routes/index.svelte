@@ -67,7 +67,7 @@
         {
           id: 1,
           name: "odzi.dog",
-          color: "orange-400",
+          color: "yellow-400",
 
           badges: [
             {
@@ -122,10 +122,10 @@
 </style>
 
 { #if loaded }
-	<main in:fade class="h-min-screen relative">
-    <div class="bg-gray-200 w-full h-min-screen relative flex">
+	<main in:fade class="relative">
+    <div class="bg-gray-200 w-full relative flex">
       <!-- Text Panel -->
-      <section class="w-full h-min-screen relative flex flex-col lg:flex-row items-end">
+      <section class="w-full h-screen relative flex flex-col lg:flex-row items-end">
         <!-- Header -->
         <header class="absolute inset-x-0 top-0 w-full py-6 px-8 md:px-6 flex justify-between items-center">
           <!-- Logotype -->
