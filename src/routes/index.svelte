@@ -49,6 +49,7 @@
             }
           ],
 
+          href: "https://lococovu.me",
           description: "Сборник всего самого интересного из мира развлечений, созданных нашим развлекательным подразделением Lococovu Studios специально для Вас. Максимально миниатюрные мини-игры в Майнкрафте, комиксы, визуальные новелы, различные небольшие игры и многое другое именно тут!",
 
           logotype: "./logotype/lococovu/white-full.svg", 
@@ -310,7 +311,7 @@
                       <p class="px-4 text-md my-3 text-white">{ service.description }</p>
 
                       <!-- Buttons -->
-                      <div class="w-full flex absolute inset-x-0 bottom-0 py-2 px-4">
+                      <div class="w-full flex justify-center absolute inset-x-0 bottom-0 py-2 px-2 md:px-4">
                         <!-- Goto -->
                         <button on:click={(e) => {
                           if (service.href != null) window.location.href = service.href;
