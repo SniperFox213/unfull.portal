@@ -261,7 +261,7 @@
       
       <!-- Fast Categories Skip -->
       <div style="overflow: hidden; overflow-x: auto;" class="mb-12 lg:mb-0 h-24 relative w-full flex justify-center">
-        <div class="absolute inset-0 w-full h-full flex items-center justify-center py-6 px-6">
+        <div class="absolute inset-0 w-full h-full flex items-center justify-center py-6 mx-24 md:px-6">
           { #each services as category }
             <div on:click={(e) => {
               if (category.status != 0) window.location.href = `#cat${ category.catId }`;
@@ -345,7 +345,7 @@
     <footer class="w-full mt-12 flex justify-center bg-gray-100 pb-8 pt-12">
       <div class="opacity-75 flex flex-col items-center">
         <!-- Team Logotype -->
-        <img style="height: 1.5vw;" src="./logotype/black.svg" alt="Unfull Team Logotype">
+        <img class="h-6" src="./logotype/black.svg" alt="Unfull Team Logotype">
         <p class="text-sm text-gray-900 mt-2">unfull Team, 2020</p>
       </div>
     </footer>
